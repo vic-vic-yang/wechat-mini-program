@@ -1,0 +1,17 @@
+<!--component/row.wxml-->
+<view class="flex-row row-item row-align"  style='{{styles}}'>
+    <view class = "left-row-flex">
+       <image wx:if="{{firstImg}}" src='{{firstImg}}' class='img'></image>
+       <text class='title'>{{title}}</text>
+    </view>
+    <input
+     value="{{detail}}"
+     style='text-align:right;color:#000;font-size:24rpx;flex:1;margin-left:20rpx;'
+     type='{{inputType}}'
+     maxlength='{{length}}'
+     bindinput='bindinput'
+    >
+    </input>
+    <text class='end-text' >{{endText}}</text>
+    
+</view>

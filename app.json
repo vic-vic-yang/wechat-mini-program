@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/me/index",
+    "pages/logs/logs",
+    "pages/home/result",
+    "pages/home/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F7F7FA",
+    "navigationBarTitleText": "格子房贷计算器",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#AAA",
+    "selectedColor": "#FF5575",
+    "backgroundColor": "#F7F7FA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-sel.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-sel.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 600000,
+    "uploadFile": 600000,
+    "downloadFile": 600000
+  },
+  "sitemapLocation": "sitemap.json"
+}

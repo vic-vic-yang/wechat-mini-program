@@ -1,0 +1,25 @@
+<!--pages/home/detail.wxml-->
+<view  class='show' style='position: relative' >
+
+  <view class='main-row main-item-center section'>
+    <view class='main-s24 main-c66 main-center' style='flex:2'>月份</view>
+    <view class='main-s24 main-c66 main-center' style='flex:2'>月供总额</view>
+    <view class='main-s24 main-c66 main-center' style='flex:2'>月供本金</view>
+    <view class='main-s24 main-c66 main-center' style='flex:2'>月供利息</view>
+    <view class='main-s24 main-c66 main-center' style='flex:2'>剩余还款</view>
+   
+  </view>
+  <scroll-view class='main-col scroll' wx:if="{{data&&data.length>0}}" scroll-y="true" scroll-into-view="{{toView}}" scroll-with-animation='true' enable-back-to-top >
+      <block  wx:for="{{data}}"  wx:key="{{item.mediaId}}">
+        <view class='main-s24  row main-row main-item-center ' id='curView{{index}}' style='{{index>=(curMonth-1)?"":"background-color: #f2f2f2;text-decoration:line-through"}}' >
+          <view  class='main-center' style='flex:2'>{{item.month}}</view>
+          <view class='main-center' style='flex:2'>￥{{item.sum}}</view>
+          <view class='main-center' style='flex:2'>￥{{item.ygbj}}</view>
+          <view class='main-center' style='flex:2'>￥{{item.yhlx}}</view>
+          <view class='main-center' style='flex:2'>￥{{item.syhk}}</view>
+        </view>
+        <rowLine/>
+      </block>
+  </scroll-view>
+</view>
+

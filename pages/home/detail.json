@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+
+    "rowLine": "../../component/row/rowLine"
+    
+  }
+}

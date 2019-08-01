@@ -1,0 +1,26 @@
+<!--component/myModal/share.wxml-->
+<view class='main show modal' hidden='{{hidden}}'>
+  <view class='content main'>
+    <text class='title' wx:if="{{title}}">{{title}}</text>
+    <view class='header' wx:if="{{data}}">
+      <image src='{{data.thumbnail}}' class='header-img' mode="aspectFill"></image>
+      <text class='text-desc'>{{data.contentDesc}}</text>
+    </view>
+   
+    <view class='share'>
+      <view class='main'>
+        <button class='img btn' open-type='share' data-item = "{{data}}"><image class='img' src='../../images/frends.png' ></image></button>
+        <text class='text'>分享好友</text>
+      </view>
+      <view class='main'>
+      <image class='img' src='../../images/make.png'  bindtap='makePage'></image>
+      <text  class='text'>个性海报</text>
+      </view>
+    </view>
+  </view>
+  <view class='content-new main' style='margin-top:20rpx'  bindtap='close'>
+    <text class='text-c'>取  消</text>
+  
+  </view>
+   
+</view>

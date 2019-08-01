@@ -1,0 +1,79 @@
+<!--pages/me/index.wxml-->
+<view class='container main-col show'>
+  <scroll-view  wx:if="{{list.length>0}}" class='scroll-info' scroll-y enable-back-to-top>
+  
+    <view  class='card main-col' bindtap='show' data-item='{{item}}' wx:for="{{list}}" wx:key="{{item.id}}">
+     <view class='topView main-row main-item-center {{item.repayment_type==0?"color-two":"color-one"}}'>
+      <view class='header main-row main-item-center' style='flex:1'>
+        <image class='house' src='{{item.repayment_type==0?"../../images/house-blue.png":"../../images/house.png"}}'></image>
+          <view class='main-s32 main-white'>{{item.repayment_type==0?"等额本金":"等额本息"}}</view>
+      </view>
+      <view class='main-row right-new main-center' data-item="{{item}}" data-index="{{index}}" catchtap='more'>
+        <view class='main-center'>
+          <image class='more' src='../../images/maue.png'></image>
+        </view>
+        <view class='main-s28 main-white'>选项</view>
+      </view>
+     </view>
+     <view class=' main-row '>
+      <view class='bottom-view main-center main-col left'>
+          <view class='main-s48 main-black' style='font-weight: 600'>￥{{item.curMonthPay}}
+          </view>
+           <view class='main-s28 main-c66'>{{item.curMonth>=0?'本月还款':'首月还款'}}
+          </view>
+          
+         
+          <view class='main-row main-item-center' style='width:80%;margin-top:20rpx;'>
+              <view class='main-c66 main-s24'>
+               进度：
+              </view>
+              <view  style='flex:1;margin-left:10rpx;margin-right:10rpx;'>
+                <progress 
+                percent="{{item.percent}}" 
+                activeColor='{{item.repayment_type==0?"#63B8FF":"#FF6347"}}'
+                backgroundColor="#f2f2f2"
+                />
+            </view>
+            <view class='main-c66 main-s24'>
+              {{item.curMonth}}/{{item.repayment_month}}
+            </view>
+          </view>
+         
+      </view>
+      <view class='main-col'>
+        <view class='main-center main-col right'>
+          <view class='main-s28 main-black' style='font-weight: bold'>{{item.reMoney}}万
+          </view>
+           <view class='main-s20 main-c66'>还款总额
+          </view>
+        </view>
+        <!-- <view style='height:4rpx;'></view>
+         <view class='main-center main-col right'>
+          <view class='main-s28 main-black' style='font-weight: bold'>{{item.pepayMoney}}万
+          </view>
+           <view class='main-s20 main-c66'>贷款利息
+          </view>
+        </view> -->
+        <view style='height:4rpx;'></view>
+        <view class='main-center main-col right ' style='border-bottom-right-radius: 10rpx;'>
+         <view class='main-s28 main-black' style='font-weight: bold'>{{item.laterPay}}万
+          </view>
+           <view class='main-s20 main-c66'>剩余还款
+          </view>
+        </view>
+      </view>
+     
+     </view>
+    
+    </view>
+    <view style='height:88rpx;'></view>
+
+  </scroll-view>
+  <view wx:else class='container main-center'>
+    <loading loadingStatus="{{loadingStatus}}" noDataImg="../../images/noData.png"/>
+  </view>
+
+  <view class='message'>
+      <button open-type='getUserInfo'  class='message-btn' session-from="weapp"><image class='message-m' src='../../images/message.png'></image></button>
+  </view>
+</view>

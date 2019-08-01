@@ -1,0 +1,11 @@
+<!--component/row.wxml-->
+<view class="flex-row row-item row-align" bindtap='_confirmEvent' style='{{styles}}'>
+    <view class = "left-row-flex">
+       <image wx:if="{{firstImg}}" src='{{firstImg}}' class='img'></image>
+       <text class='title'>{{title}}</text>
+    </view>
+    <view class = "row-flex ">
+        <text class='detaile'> {{detail}}</text>
+        <image src='{{endImg}}' class='end-img'></image>
+    </view>
+</view>

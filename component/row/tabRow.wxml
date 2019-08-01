@@ -1,0 +1,6 @@
+<!--component/row/tabRow.wxml-->
+  <view class='tab main-row {{shadow?"shadow":""}}' >
+    <view class='tab-item main-center' wx:for="{{tabArray}}" bindtap='checkTab' wx:key="{{item}}" data-click="{{index}}"> 
+      <view class='main-center main-col {{curIndex==index?"tab-text":"tab-text-e"}}' >{{item}}</view>
+    </view>
+  </view>

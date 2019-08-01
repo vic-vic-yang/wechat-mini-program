@@ -1,0 +1,47 @@
+/* pages/home/index.wxss */
+.sure{
+  height: 88rpx;
+  margin-top: 80rpx;
+
+  margin-bottom: 20rpx;
+
+  
+}
+.desc{
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.choose-view{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.3);
+  justify-content: flex-end;
+  z-index: 10000
+}
+.cancel{
+  width: 100vw;
+  flex:1;
+  background-color: rgba(0,0,0,0);
+
+}
+.chooseSure{
+  background-color: #FFF;
+  height: 88rpx;
+  padding-left: 28rpx;
+  padding-right: 28rpx;
+}
+.datesure{
+  background-color: #FF6347;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  border-radius: 10rpx;
+}
+.code{
+  width: 694rpx;
+  height: 200rpx;
+}

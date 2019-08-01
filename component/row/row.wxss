@@ -1,0 +1,49 @@
+/* component/row.wxss */
+.row-item{
+
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.row-align{
+  flex-direction: row;
+  justify-content: space-between;
+}
+.img{
+  height: 44rpx;
+  width: 44rpx;
+}
+.title{
+  font-size: 28rpx;
+  color: #000;
+  /* flex-wrap: nowrap; */
+  /* margin-left: 8px; */
+  /* flex:1 */
+}
+.detaile{
+  font-size: 24rpx;
+  color: #000;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.end-img{
+  height: 24rpx;
+  width: 24rpx;
+  margin-left: 15rpx
+}
+.left-row-flex{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.row-flex{
+  width:50%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

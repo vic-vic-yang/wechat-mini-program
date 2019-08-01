@@ -1,0 +1,71 @@
+/**app.wxss**/
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff
+} 
+.main-col{
+  display: flex;
+  flex-direction: column
+}
+.main-row{
+  display: flex;
+  flex-direction: row
+}
+.main-center{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.main-item-center{
+   display: flex;
+   align-items: center
+}
+.main-bg{
+  background-color: #fff
+}
+
+
+.main-c{
+  background-color: #FF6347
+}
+.main-red{
+  color: #FF6347
+}
+.main-c33{
+  color: #333
+}
+.main-black{
+  color: #000
+}
+.main-c66{
+  color: #666
+}
+.main-c99{
+  color: #999
+}
+.main-c00{
+  color: #f2f2f2
+}
+.main-white{
+  color: #fff
+}
+.main-s48{
+  font-size:48rpx;
+}
+.main-s32{
+  font-size: 32rpx;
+}
+.main-s36{
+  font-size: 36rpx;
+}
+.main-s28{
+  font-size: 28rpx;
+}
+.main-s24{
+  font-size: 24rpx;
+}
+.main-s20{
+  font-size: 20rpx;
+}

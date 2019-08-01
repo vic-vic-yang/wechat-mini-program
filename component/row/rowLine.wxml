@@ -1,0 +1,2 @@
+<!--component/rowLine/rowLine.wxml-->
+<view class='line'></view>

@@ -1,0 +1,12 @@
+<!--component/loading/loading.wxml-->
+<view class='spinner' wx:if="{{loadingStatus=='loading'}}">
+    
+   <view  class='bounce1 red'></view>
+   <view  class='bounce2 red'></view>
+   <view  class='bounce3 red'></view>
+  
+</view>
+<view wx:elif="{{loadingStatus=='end'}}" class='main-center' style='flex-direction: column'>
+      <image wx:if="{{noDataImg}}" class='no-data-img' src='{{noDataImg}}'></image>
+      <text class='text'>{{noDataText?noDataText:"暂无数据"}}</text>
+  </view>

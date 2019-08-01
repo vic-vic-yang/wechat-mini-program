@@ -1,0 +1,105 @@
+/* component/myModal/share.wxss */
+.modal{
+  position: absolute;
+  left: 0;
+  top: 0
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+.show{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+.content{
+  background-color: #fff;
+  padding: 16rpx;
+  width: 658rpx;
+  position: relative
+}
+.content-new{
+  background-color: #fff;
+  padding: 26rpx;
+  width: 638rpx;
+}
+.title{
+  font-size: 36rpx;
+  color: #000
+}
+.text{
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 10rpx;
+}
+.text-c{
+  font-size: 32rpx;
+  color: #333
+}
+.share{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin-top: 40rpx;
+  padding-bottom: 10rpx;
+}
+.img{
+  height: 88rpx;
+  width: 88rpx;
+  border-radius: 50%;
+  padding: 0;
+ 
+}
+.btn{
+  border: 0;
+}
+.btn::after{
+  border: 0
+}
+.close{
+  height: 44rpx;
+  width: 44rpx;
+  margin-top: 10rpx;
+}
+.header{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%
+}
+.header-img{
+  width: 100%;
+  height: 370rpx;
+  
+}
+.play{
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  margin-left: -50rpx;
+  margin-top: -50rpx;
+
+}
+.text-desc{
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 10rpx;
+  padding: 10rpx;
+  padding-bottom: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: break-word;
+    
+}
+
+
+

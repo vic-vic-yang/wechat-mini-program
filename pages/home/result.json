@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "single-row": "../../component/row/row",
+    "rowLine": "../../component/row/rowLine",
+    "tabRow": "../../component/row/tabRow",
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  },
+  "navigationBarTitleText": "计算结果"
+}

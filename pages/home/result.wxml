@@ -1,0 +1,80 @@
+<!--pages/home/result.wxml-->
+<view class='container'>
+  <view class='main-col main-bg'>
+      <tabRow wx:if="{{showSave}}" tabArray='{{tabArray}}' bind:confirmEvent="tabClick" curIndex="{{curIndex}}" />
+      <view  style='padding-left:30rpx;padding-right:30rpx;{{showSave?"margin-top:98rpx;":""}}'>
+      <view class='main-row  main-center'>
+        <view style='flex:1' class='circleprogress'>
+           <ec-canvas  id="mychart-dom-bar" class='circleprogress' canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </view>
+       
+        <view class='main-col'  style='flex:1'>
+          <view class='main-row main-item-center'>
+            <view class='dol red'></view>
+            <view class='main-s24 main-c66'>贷款总额：</view>
+            <view class='main-s24 main-black bold'>{{loantotle}}元</view>
+          </view>
+          <view class='main-row main-item-center' style='margin-top:20rpx'>
+            <view class='dol blue'></view>
+            <view class='main-s24 main-c66'>支付利息：</view>
+            <view class='main-s24 main-black bold'>{{rate}}元</view>
+          </view>
+        </view>
+      
+      </view>
+      <rowLine/>
+      <view class='main-row main-s28 main-c66 row'>
+        <view >贷款总额：</view>
+        <view class='main-black bold' style='flex:1'>{{loantotlenew}}万</view>
+        <view >还款总额：</view>
+        <view class='main-black bold' >{{totlePay}}万</view>
+      </view>
+      
+      <rowLine/>
+       <view class='main-row main-s28 main-c66 row ' >
+        <view>支付利息：</view>
+        <view class='main-black bold' style='flex:1'>{{ratenew}}万</view>
+        <view>贷款月数：</view>
+        <view class='main-black bold'>{{month}}月</view>
+       </view>
+      <rowLine/>
+      <view class='main-row main-s28 main-c66 row' bindtap='detail'>
+        <view>{{curIndex==0?"首月还款":"月均还款"}}：</view>
+        <view class='main-black bold' style='{{curIndex==1?"flex:1":""}}' >{{monthPay}}</view>
+        <view class='main-c66 main-row' wx:if="{{curIndex==0}}" style='flex:1'>（每月递减<view class='main-black bold'>{{low}}</view>元）</view>
+        <view class='main-row main-item-center main-s24 t-blue' >
+          明细
+          <image src='../../images/right.png' class='end-img'></image>
+        
+        </view>
+       </view>
+      <rowLine/>
+      <picker wx:if="{{showSave}}" mode="date" value="{{date}}" start="1990-01-01" end="2030-012-01" bindchange="bindDateChange">
+      <view class='main-row main-s28 main-c66 row ' >
+        <view>开始还款时间：</view>
+        <view class='main-black bold' style='flex:1'>{{date}}</view>
+         <image src='../../images/right.png' class='end-img'></image>
+       </view>
+     
+          
+      </picker>
+      <view wx:else class='main-row main-s28 main-c66 row ' >
+        <view>开始还款时间：</view>
+        <view class='main-black bold' style='flex:1'>{{date}}</view>
+      </view>
+
+      <rowLine/>
+      <view wx:if="{{showSave}}" class='sure main-white main-t32 main-center  main-c' bindtap='sure' >保存</view>
+      </view>
+      <view  wx:if="{{showSave}}"  animation="{{animationData}}"  class=' main-white tips'>
+      小提示：保存计算结果，轻松查看房贷历史信息。
+      </view>
+      
+      
+  </view>
+  <view style='flex:1'></view>
+  <view class='main-col main-center' style='margin-bottom:40rpx;margin-top:40rpx;' >
+        <button class='img btn' open-type='share' ><image class='img' src='../../images/frends.png' ></image></button>
+        <text class='main-s24 main-c33'>分享好友</text>
+  </view>
+</view>

@@ -1,0 +1,42 @@
+<!--component/picker/two.wxml-->
+<!--component/picker/one.wxml-->
+<view wx:if="{{showChoose}}" class='choose-view main-col' >
+    <view class='cancel' bindtap='showModel'>
+    
+    </view>
+    
+    <view class='chooseSure ' >
+    <view style='background-color:#fff;width:60rpx;'  bindtap='showModel'></view>
+     
+      <view class='title' style='flex:1'>贷款利率</view>
+      <view class='datesure main-s28 main-c99' style='background-color:#F7F7FA'  bindtap='showModel'>取消</view>
+    </view>
+    <view style='height:1px;background-color:#f2f2f2'></view>
+    <view style='background-color:#fff'>
+    <scroll-view class='scroll-info' scroll-y enable-back-to-top>
+      <view class='main-col' wx:for="{{showData}}" wx:key="{{item.value}}">
+
+        <view  class='row main-item-center'  style='{{value==item.value?"color:#FF6347":""}};{{!value&&item.select?"color:#FF6347":""}}' bindtap='dataSure' data-item="{{item}}">{{item.text}}({{item.value}}%)</view>
+        <view style='height:1px;background-color:#f2f2f2'></view>
+     </view>
+    
+    </scroll-view>
+    </view>
+    <view style='height:1px;background-color:#f2f2f2'></view>
+    <view class='row main-item-center' style='height:88rpx;padding-left:30rpx;padding-right:30rpx;'>
+      <view style='font-size:28rpx;color:#333'>自定义利率:</view>
+      <input 
+        class='input' 
+        value='{{inputValue}}'
+        type='digit'
+        maxlength='5'
+        bindinput='bindinput'
+        >
+      
+      </input>%
+      <view style='flex:1'></view>
+      <view class='datesure main-s28 main-white' bindtap='dataSureNew'>确定</view>
+    </view>
+
+  </view>
+

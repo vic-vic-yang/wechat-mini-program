@@ -1,0 +1,32 @@
+/* pages/home/detail.wxss */
+.show{
+  background-color: #F5F7FA;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100vh
+}
+.section{
+  height: 88rpx;
+  padding-right: 28rpx;
+  background-color: #eee;
+  position: fixed;
+  width: 100%;
+  padding-left: 0;
+
+}
+.scroll{
+  display: flex;
+  flex: 1;
+  background-color: #fff;
+  padding-top: 92rpx;
+  padding-bottom: 0;
+  height: 100vh
+}
+.row{
+ padding: 30rpx;
+ padding-left: 0;
+ padding-right: 0
+ 
+}
+

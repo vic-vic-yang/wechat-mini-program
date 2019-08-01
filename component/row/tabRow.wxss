@@ -1,0 +1,49 @@
+/* component/row/tabRow.wxss */
+.tab{
+  height: 92rpx;
+  border-bottom: 0.5rpx solid #ccc;
+  background-color: #fff;
+
+  z-index: 9999;
+  position: fixed;
+  width: 100%
+}
+.shadow{
+  box-shadow: 0 4rpx 6rpx #C7C7C7;
+  margin-bottom:10rpx;
+}
+.tab-item{
+  flex: 1;
+  display: flex;
+  background-color: #fff
+}
+.tab-text{
+  color: #FF6347;
+  font-size: 30rpx;
+  height: 92rpx;
+  border-top: 1rpx solid #fff;
+  border-bottom: 1px solid #FF6347;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+}
+.tab-text-e{
+  color: #000;
+  font-size: 30rpx;
+  height: 91rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  border-bottom: 0rpx solid #C7C7C7;
+  
+}
+.main-row{
+  display: flex;
+  flex-direction: row
+}
+.main-col{
+  display: flex;
+  flex-direction: column
+}
+.main-center{
+  justify-content: center;
+  align-items: center;
+}

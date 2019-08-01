@@ -1,0 +1,71 @@
+/* pages/home/result.wxss */
+.row{
+  padding-top: 30rpx;
+   padding-bottom: 30rpx;
+  align-items: center
+}
+.sure{
+  height: 88rpx;
+  margin-top: 80rpx;
+
+  margin-bottom: 20rpx;
+  
+
+  
+}
+.bold{
+  font-weight: 700
+}
+.header{
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+.dol{
+  height: 14rpx;
+  width: 14rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.red{
+  background-color: #FFB6C1
+}
+.blue{
+  background-color: #63B8FF
+}
+.t-blue{
+  color: #63B8FF;
+  padding-left: 20rpx;
+
+}
+.end-img{
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 10rpx;
+}
+.circleprogress{   
+  width: 280rpx;   
+  height: 280rpx;   
+} 
+.tips{
+  background:#FFB6C1;
+  margin-top: 14rpx;
+
+  padding-left: 4rpx;
+  margin-left: 30rpx;
+  font-size: 18rpx;
+  width: 320rpx;
+
+}
+.img{
+  height: 88rpx;
+  width: 88rpx;
+  border-radius: 50%;
+  padding: 0;
+ 
+}
+.btn{
+  border: 0;
+}
+.btn::after{
+  border: 0
+}
