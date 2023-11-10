@@ -1,0 +1,2 @@
+# wechat-mini-program
+program
